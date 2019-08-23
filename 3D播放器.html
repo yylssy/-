@@ -1,1 +1,122 @@
-欧耶欧耶
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D播放器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("./img/111.JPG") no-repeat;
+            background-size:cover;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            margin-left: -100px;
+            transform-style: preserve-3d;
+            animation: sport 6s linear 0s infinite;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: black;
+        }
+        ul li:nth-child(1){
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        ul li:nth-child(2){
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4){
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        ul li:nth-child(5){
+            transform: rotateY(-60deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            transform: translateZ(200px);
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        ul:hover li img{
+            opacity: 0.5;
+        }
+        ul li:hover img{
+            opacity: 1;
+        }
+        @keyframes sport {
+            from{
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+        .fire{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 1500px;
+            bottom: 100px;
+            animation: fly 4s linear 0s infinite;
+        }
+        @keyframes fly {
+            0%{
+                left: 1500px;
+                bottom: 100px;
+                opacity: 0;
+            }
+            33%{
+                left: 1200px;
+                bottom: 400px;
+                opacity: 1;
+            }
+            66%{
+                left: 300px;
+                bottom: 370px;
+                opacity: 0;
+            }
+            100%{
+                left: 400px;
+                bottom: 100px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="./img/1.JPG" alt=""></li>
+    <li><img src="./img/2.JPG" alt=""></li>
+    <li><img src="./img/3.JPG" alt=""></li>
+    <li><img src="./img/4.JPG" alt=""></li>
+    <li><img src="./img/5.JPG" alt=""></li>
+    <li><img src="./img/6.JPG" alt=""></li>
+</ul>
+<img src="./img/222.png" class="fire">
+<audio src="img/X.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
